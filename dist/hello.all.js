@@ -203,7 +203,7 @@ hello.utils.extend(hello, {
 	settings: {
 
 		// OAuth2 authentication defaults
-		redirect_uri: window.location.href.split('#')[0],
+		redirect_uri: (typeof window == 'undefined')? '': window.location.href.split('#')[0],
 		response_type: 'token',
 		display: 'popup',
 		state: '',
